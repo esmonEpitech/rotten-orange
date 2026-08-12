@@ -34,7 +34,7 @@ export default function Page() {
                 formData.append("profile", profile);
             }
 
-            const response = await fetch("http://localhost:5000/auth/signup", {
+            const response = await fetch("https://rotten-orange-backend.onrender.com/auth/signup", {
                 method: "POST",
                 // headers: { "Content-Type": "application/json" },
                 body: formData,
