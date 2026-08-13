@@ -129,7 +129,7 @@ export default function MovieCard({
       <button
         onClick={handleWatchlist}
         className="mx-2.5 mb-2.5 border border-gray-300 rounded-full py-1.5 text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-gray-50 transition-colors"
-      >
+      > 
         {isFavorite ? "✓ AJOUTÉ" : "+ FAVORITS LIST"}
       </button>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -18,7 +18,7 @@ interface User {
   profile?: string;
 }
 
-export default function Navbar({
+function NavbarContent({
   userInitial = "E",
   onFilterChange,
 }: NavbarProps) {
@@ -131,7 +131,7 @@ export default function Navbar({
               {user?.profile ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={`http://localhost:5000/uploads/${user.profile}`}
+                  src={`https://rotten-orange-backend.onrender.com/uploads/${user.profile}`}
                   alt="profile"
                   className="w-full h-full object-cover"
                 />
@@ -150,5 +150,15 @@ export default function Navbar({
         )}
       </div>
     </nav>
+    
+  );
+  
+}
+
+export default function Navbar(props: NavbarProps) {
+  return (
+    <Suspense fallback={<div className="h-16 bg-white border-b border-orange-100" />}>
+      <NavbarContent {...props} />
+    </Suspense>
   );
 }
