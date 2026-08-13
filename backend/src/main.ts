@@ -16,7 +16,7 @@ async function bootstrap() {
       'http://127.0.0.1:3000',
       'http://127.0.0.1:3001',
       'https://rotten-orange-frontend.onrender.com',
-      'https://rotten-orange.vercel.app/',
+      'https://rotten-orange.vercel.app',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS', 'HEAD'],
     allowedHeaders: ['Content-Type', 'Authorization'],
