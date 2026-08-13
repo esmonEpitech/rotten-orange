@@ -262,7 +262,7 @@ export default function ProfilePage() {
               {user.profile ? (
 
                 <img
-                  src={`http://localhost:5000/uploads/${user.profile}`}
+                  src={`https://rotten-orange-api.onrender.com/uploads/${user.profile}`}
                   alt="profile"
                   className="w-full h-full object-cover"
                 />
