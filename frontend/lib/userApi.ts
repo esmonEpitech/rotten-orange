@@ -4,7 +4,7 @@ export async function updateUser(
 ) {
   const token = sessionStorage.getItem("token");
 
-  const res = await fetch(`http://localhost:5000/users/${userId}`, {
+  const res = await fetch(`https://rotten-orange-backend.onrender.com/users/${userId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export async function updateUserProfile(userId: string, file: File) {
   const formData = new FormData();
   formData.append("profile", file);
 
-  const res = await fetch(`http://localhost:5000/users/${userId}/profile`, {
+  const res = await fetch(`https://rotten-orange-backend.onrender.com/users/${userId}/profile`, {
     method: "PATCH",
     headers: {
       Authorization: `Bearer ${token}`,

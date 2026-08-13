@@ -1,4 +1,4 @@
-const baseAPI = "http://localhost:5000";
+const baseAPI = "https://rotten-orange-backend.onrender.com";
 
 export const addFavorit = async (userId: string, movieId: string) =>{
 

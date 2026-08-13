@@ -28,7 +28,7 @@ export default function MoviesPage() {
     getMovesData();
   }, []);
 
-  // 🔥 filtre les films
+  //  filtre les films
   const filteredMovies = movies.filter((movie) =>
     movie.title.toLowerCase().includes(search)
   );
