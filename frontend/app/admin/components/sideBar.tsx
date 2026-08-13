@@ -3,12 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
 
-export default function Sidebar({ isOpen, onClose, activeTab, setActiveTab }) {
+export default function Sidebar({
+  isOpen,
+  onClose,
+  activeTab,
+  setActiveTab,
+}: SidebarProps) {
   const menuItems = [
     { id: "dashboard", label: "Dashboard" },
     { id: "movies", label: "Films" },

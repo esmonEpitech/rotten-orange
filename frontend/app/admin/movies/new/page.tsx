@@ -9,6 +9,7 @@ interface User {
   _id: string;
   username: string;
   email: string;
+  role: "admin" | "user";
 }
 function NewMovie() {
   const [title, setTitle] = useState("");

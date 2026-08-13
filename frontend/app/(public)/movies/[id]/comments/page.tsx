@@ -4,12 +4,48 @@ import CommentCard from "@/components/comments/CommentCard";
 import Link from "next/link";
 
 const MOCK_COMMENTS = [
-  { id: "1", username: "Nailah",  time: "4h", rating: 3, text: "It was okay... something was missing.", verified: true },
-  { id: "2", username: "Roxanne", time: "4h", rating: 1, text: "The theater was closed due to power outage.", verified: true },
-  { id: "3", username: "Ezekiel", time: "2h", rating: 4, text: "Vraiment bien réalisé, je recommande !", verified: true },
-  { id: "4", username: "Mory",    time: "1j", rating: 2, text: "Trop court, pas assez de développement.", verified: false },
-  { id: "5", username: "Samuel",  time: "3j", rating: 5, text: "Chef-d'œuvre absolu. Je l'ai vu deux fois en salle.", verified: true },
-  { id: "6", username: "Amina",   time: "5j", rating: 3, text: "Correct sans plus, le scénario manque de profondeur.", verified: false },
+  {
+    _id: "1",
+    username: "Nailah",
+    userId: "user-1",
+    movieId: "1",
+    comment: "It was okay... something was missing.",
+  },
+  {
+    _id: "2",
+    username: "Roxanne",
+    userId: "user-2",
+    movieId: "1",
+    comment: "The theater was closed due to power outage.",
+  },
+  {
+    _id: "3",
+    username: "Ezekiel",
+    userId: "user-3",
+    movieId: "1",
+    comment: "Vraiment bien réalisé, je recommande !",
+  },
+  {
+    _id: "4",
+    username: "Mory",
+    userId: "user-4",
+    movieId: "1",
+    comment: "Trop court, pas assez de développement.",
+  },
+  {
+    _id: "5",
+    username: "Samuel",
+    userId: "user-5",
+    movieId: "1",
+    comment: "Chef-d'œuvre absolu. Je l'ai vu deux fois en salle.",
+  },
+  {
+    _id: "6",
+    username: "Amina",
+    userId: "user-6",
+    movieId: "1",
+    comment: "Correct sans plus, le scénario manque de profondeur.",
+  },
 ];
 
 export default async function CommentsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -32,7 +68,7 @@ export default async function CommentsPage({ params }: { params: Promise<{ id: s
 
       <div className="flex flex-col gap-4">
         {MOCK_COMMENTS.map((c) => (
-          <CommentCard key={c.id} {...c} />
+          <CommentCard key={c._id} {...c} />
         ))}
       </div>
 

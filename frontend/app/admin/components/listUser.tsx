@@ -10,6 +10,8 @@ interface User {
   isAdmin: number | boolean;
 }
 
+
+
 export default function Listusers() {
   const store = {
     paginationUsers: [
@@ -23,8 +25,7 @@ export default function Listusers() {
     itemsPerPage: 10,
     currentPage: 1,
     openProfile: (user: User) => console.log("Profil ouvert :", user),
-    deleteUsers: (slug: string) => console.log("Suppression du slug :", slug),
-  };
+deleteUsers: (id: string | number) => console.log("Suppression de l'utilisateur :", id),  };
 
   // Calcul du nombre de pages totales
   const totalPages = Math.ceil(store.users.length / store.itemsPerPage);

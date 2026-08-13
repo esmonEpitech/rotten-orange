@@ -16,6 +16,7 @@ interface User {
   _id: string;
   username: string;
   email: string;
+  role: "admin" | "user";
 }
 export default function Dashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
